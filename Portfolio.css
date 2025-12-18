@@ -1,0 +1,500 @@
+/*------------------------Fonts------------------------*/
+
+@font-face {
+    font-family: "Font";
+    src: url('fonts/Montserrat-Regular.ttf'); 
+}
+
+@font-face {
+    font-family: "BoldFont";
+    src: url('fonts/Montserrat-Bold.ttf');
+}
+
+
+/*------------------------Colors------------------------*/
+
+:root {
+    /*Couleur du texte et du fond*/
+    --color-bleu-gris: #aeb6c6;
+    /*Couleur du fond et du texte*/
+    --color-bleu-foncé: #070a12;
+    /*Couleur du fond*/
+    --color-azur: #063257;
+    /*Couleur du fond du fond*/
+    --color-azur-clair: #3e6f9d;
+    /*Couleur accent*/
+    --color-orange: #d47c6e;
+}
+
+
+/*------------------------Body------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Font", sans-serif;
+    background-color: var(--color-bleu-foncé);
+    color: var(--color-bleu-gris);
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-bleu-foncé);
+}
+
+li{
+    list-style: none;
+}
+
+
+/*------------------------Header------------------------*/
+
+header nav { /*Position nav*/
+    font-family: "BoldFont"; 
+    background-color: var(--color-bleu-foncé);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top:0;
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a{ /*Liens du nav*/
+    display: flex;
+    align-items: center;
+    padding: 1em 1.5em;
+    color: var(--color-bleu-gris);
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+header nav ul li a:hover, .projets article > a:hover, .pageprojets article > a:hover{ /*Quand on passe sur les liens du nav et les boutons des projets*/
+    background-color: var(--color-orange);
+    color: var(--color-bleu-foncé);
+}
+
+
+/*------------------------Nav latéral------------------------*/
+
+nav.contact ul{ /*Position + format nav latérale*/
+    background-color: var(--color-bleu-foncé);
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    position: fixed;
+    right:0;
+    padding: 15px;
+    width: 4rem;
+    margin-top: 17%;
+    font-size: 0;
+    transition: all 0.4s ease;    
+}
+
+nav.contact ul li a img { /*Format img nav latérale*/
+    width: 4rem;
+    transition: width 0.4s ease;
+}
+
+nav.contact img:hover{ /*Animation quand on passe sur le nav*/
+    animation: jump-shaking 0.83s 2;
+}
+
+@keyframes jump-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-5px) }
+  35% { transform: translateY(-5px) rotate(17deg) }
+  55% { transform: translateY(-5px) rotate(-17deg) }
+  65% { transform: translateY(-5px) rotate(17deg) }
+  75% { transform: translateY(-5px) rotate(-17deg) }
+  100% { transform: translateY(0) rotate(0) }
+}
+
+@media (max-width: 900px) {
+nav.contact ul{ /*Position + format nav latérale*/
+    padding: 10px;
+    width: 3rem; 
+}
+
+nav.contact ul li a img { /*Format img nav latérale*/
+    width: 3rem;
+}
+}
+
+
+/*------------------------Home------------------------*/
+
+section.home{ /*Image de fond + position + type écriture pour section home*/
+    height: 100vh; 
+    background-image: url("./Image/Falaise.jpg"); 
+    background-size: cover;
+    background-position: center;  
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "BoldFont"; 
+    text-align: center;
+    text-transform: uppercase; 
+}
+
+h1{ /*Prénom Nom*/
+    font-size: 4em;
+    margin-top: 3em;
+    color: var(--color-bleu-foncé);
+}
+
+h2{ /*Titre*/
+    font-size: 2em;
+    margin: 0.2em;
+    color: var(--color-bleu-foncé);
+}
+
+.home p{ /*Recherche*/
+    font-size: 2em;
+    margin: 0.2em;
+    color: var(--color-bleu-foncé);
+}
+
+.home img{ /*Image flèche*/
+    margin-top: 300px;
+    width: 4em;
+    height: 4em;
+    animation: bouge 2s infinite alternate ease-in-out;
+}
+
+@keyframes bouge { /*Animation flèche*/
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
+
+
+/*------------------------Main------------------------*/
+
+main{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+h3{ /*Titre de section*/
+    font-family: "BoldFont"; 
+    text-align: center;
+    text-transform: uppercase; 
+    font-size: 3rem;
+    margin:7% 13% 5% 13%;
+}
+
+section.projets, section.loisirs, section.apropos, section.competences{ /*Position sections*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 10%;
+    scroll-margin-top: 250px;
+}
+
+section.loisirs{ /*Position section loisirs*/
+    width: 70%;
+    margin: 0 15%;
+    justify-content: center;
+}
+
+section.exp{ /*Position section expériences*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: 0 15%;
+    scroll-margin-top: 320px;
+}
+
+
+/*------------------------Section Apropos------------------------*/
+
+.apropos p{ /*Paragraphes à propos*/
+    width: 40%;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+
+/*------------------------Section Compétences------------------------*/
+
+h4{ /*Sous titres compétences*/
+    padding-left: 10px;
+    font-family: "BoldFont";
+    font-size: 1.2em;
+    margin: 20px 0 20px 0;
+    width: 100%;
+}
+
+h5{ /*Sous titres compétences informatiques*/
+    padding-left: 10px;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+div.competences-col{ /*Position compétences*/
+    width: 40%;
+}
+
+div.informatique-category{ /*Position compétences informatiques*/
+    margin: 0px 50px 20px 0;
+}
+
+div.competences-col, article.informatique, ul.competences-list{ /*Position compétences*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+ul.competences-list a{ /*Format compétences*/
+    border-radius: 10px;
+    background-color: var(--color-bleu-gris);
+    color: var(--color-bleu-foncé);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: "BoldFont";
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    box-sizing: border-box;
+    max-width: 15ch;
+    transition: transform 0.4s ease;
+}
+
+a.competences-item{ /*Format compétences sans icons*/
+    min-width: 15ch;
+    min-height: 77px;
+}
+
+a.competences-icon{ /*Format compétences avec icons*/
+    flex-direction: column;   
+    min-width: 10ch;
+}
+
+a.competences-item:hover, a.competences-icon:hover{ /*Effet quand on passe sur les compétences*/
+    transform: scale(0.8);
+}
+
+.icon{ /*Format icons*/
+    margin: 0 .5rem 0 .5rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+section.competences a.competences-item, section.competences a.competences-icon{ /*Couleur orange pour les compétences de la section compétence*/
+    background-color: var(--color-orange);
+    scroll-margin-top: 250px;
+}
+
+
+/*--------------------Section Projets et pages projets--------------------*/
+
+.projets article{ /*Format des div des projets*/
+    background-color: var(--color-azur);
+    border-radius: 10px;
+    width: 35%;
+}
+
+.projets img{ /*Format des images dans projets*/
+    width: 100%;
+    height: 350px;
+    border-radius: 10px 10px 0 0;
+}
+
+.projets h4{ /*Titre des projets*/
+    padding: 0;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 30px 0 30px 0;
+}
+
+.projets ul{ /*Position lignes équipe et temps*/
+    padding: 0;
+    margin: 20px;
+}
+
+.projets li{ /*Lignes équipe et temps*/
+    padding-top: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.projets p{ /*Explications du projet*/
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.projets a{ /*Bouton En savoir plus*/
+    border-radius: 10px;
+    background-color: var(--color-bleu-gris);
+    padding: 13px;
+    width: fit-content;  
+    text-align: center;
+    font-family: "BoldFont";
+    font-size: 15px;
+    margin-left: auto;
+    display: block;
+    margin-top: 30px ;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+article.pageprojets{ /*Format des articles des page projets*/
+    background-color: var(--color-azur);
+    border-radius: 10px;
+    width: 40%;
+    padding:10px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+aside.pageprojets{ /*Position des images dans page projets*/
+    width: 40%;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pageprojets img{ /*Format des images dans page projets*/
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: 45%;
+}
+
+.pageprojets a{ /*Bouton Voir le code dans page projets*/
+    border-radius: 10px;
+    color: var(--color-bleu-foncé);
+    padding: 20px;
+    margin: 40px;
+    text-align: center;
+    font-family: "BoldFont";
+    font-size: 15px;
+    display: flex;
+    justify-content: center;   
+    width: 25%;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+
+/*--------------------Section Exp--------------------*/
+
+summary{ /*Format "titres" du menu déroulant*/
+    background-color: var(--color-azur);
+    padding: 20px;
+    color: var(--color-bleu-gris);
+    border-radius: 10px;
+    list-style-type: none;
+    font-size: 1em;
+    scroll-margin-top: 250px;
+}
+
+summary::before { /*Menu déroulant fermé = +*/
+    content: '+';
+    padding: 0 10px;
+    float: right;
+    cursor: pointer;
+}
+
+details[open] > summary::before { /*Menu déroulant ouvert = -*/
+    content: '-';
+    cursor: pointer;
+}
+
+details{ /*Format details*/
+    background-color: var(--color-azur-clair);
+    color: var(--color-bleu-foncé);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+details img{ /*Format img de details*/
+    width: 20px;
+    height: 20px;
+    padding: 20px 5px 0 20px;
+}
+
+details p{ /*Explication expérience*/
+    margin: 30px 20px 40px 20px;
+    text-align: justify;
+}
+
+.exp h5{ /*Sous titres compétences informatiques*/
+    font-size: 0.8em;
+    margin-left: 22px;
+}
+
+details ul.competences-list{ /*Position compétences*/
+    margin: 20px;
+    margin-top: 10px;
+}
+
+#lastexp{ /*Enlever la marge du dernier menu déroulant*/
+    margin-bottom: 0;
+}
+
+
+/*--------------------Section Loisirs------------------------*/
+
+.loisirs img{ /*Format img*/
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    margin: 0 30px 0 30px;
+}
+
+figcaption{ /*Format légende*/
+    font-size: 2em;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+
+/*--------------------Footer------------------------*/
+
+footer{
+    background-color: var(--color-azur);
+    color: var(--color-bleu-gris);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer p{ 
+    font-size: 1em;
+    font-family: "BoldFont"; 
+    text-align: center;
+}
+
+footer p a{
+    color: var(--color-bleu-gris)
+}

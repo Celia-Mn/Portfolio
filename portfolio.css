@@ -17,7 +17,7 @@
     /*Couleur du texte et du fond*/
     --color-bleu-gris: #aeb6c6;
     /*Couleur du fond et du texte*/
-    --color-bleu-foncé: #070a12;
+    --color-bleu-fonce: #070a12;
     /*Couleur du fond*/
     --color-azur: #063257;
     /*Couleur du fond du fond*/
@@ -33,14 +33,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Font", sans-serif;
-    background-color: var(--color-bleu-foncé);
+    background-color: var(--color-bleu-fonce);
     color: var(--color-bleu-gris);
     scroll-behavior: smooth;
 }
 
 a{
     text-decoration: none;
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
 }
 
 li{
@@ -52,7 +52,7 @@ li{
 
 header nav { /*Position nav*/
     font-family: "BoldFont"; 
-    background-color: var(--color-bleu-foncé);
+    background-color: var(--color-bleu-fonce);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -80,14 +80,14 @@ header nav ul li a{ /*Liens du nav*/
 
 header nav ul li a:hover, .projets article > a:hover, .pageprojets article > a:hover{ /*Quand on passe sur les liens du nav et les boutons des projets*/
     background-color: var(--color-orange);
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
 }
 
 
 /*------------------------Nav latéral------------------------*/
 
 nav.contact ul{ /*Position + format nav latérale*/
-    background-color: var(--color-bleu-foncé);
+    background-color: var(--color-bleu-fonce);
     border-radius: 15px 0px 0px 15px;
     display: flex;
     flex-direction: column;
@@ -136,7 +136,7 @@ nav.contact ul li a img { /*Format img nav latérale*/
 
 section.home{ /*Image de fond + position + type écriture pour section home*/
     height: 100vh; 
-    background-image: url("./Image/Falaise.jpg"); 
+    background-image: url("./image/falaise.jpg"); 
     background-size: cover;
     background-position: center;  
     background-attachment: fixed;
@@ -152,19 +152,19 @@ section.home{ /*Image de fond + position + type écriture pour section home*/
 h1{ /*Prénom Nom*/
     font-size: 4em;
     margin-top: 3em;
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
 }
 
 h2{ /*Titre*/
     font-size: 2em;
     margin: 0.2em;
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
 }
 
 .home p{ /*Recherche*/
     font-size: 2em;
     margin: 0.2em;
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
 }
 
 .home img{ /*Image flèche*/
@@ -267,7 +267,7 @@ div.competences-col, article.informatique, ul.competences-list{ /*Position comp�
 ul.competences-list a{ /*Format compétences*/
     border-radius: 10px;
     background-color: var(--color-bleu-gris);
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -289,6 +289,8 @@ a.competences-item{ /*Format compétences sans icons*/
 a.competences-icon{ /*Format compétences avec icons*/
     flex-direction: column;   
     min-width: 10ch;
+    min-height: 8ch;
+    line-height: 1.5;
 }
 
 a.competences-item:hover, a.competences-icon:hover{ /*Effet quand on passe sur les compétences*/
@@ -389,7 +391,7 @@ aside.pageprojets{ /*Position des images dans page projets*/
 
 .pageprojets a{ /*Bouton Voir le code dans page projets*/
     border-radius: 10px;
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
     padding: 20px;
     margin: 40px;
     text-align: center;
@@ -429,7 +431,7 @@ details[open] > summary::before { /*Menu déroulant ouvert = -*/
 
 details{ /*Format details*/
     background-color: var(--color-azur-clair);
-    color: var(--color-bleu-foncé);
+    color: var(--color-bleu-fonce);
     border-radius: 10px;
     margin-bottom: 30px;
     font-size: 1.5em;

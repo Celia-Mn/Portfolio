@@ -111,13 +111,13 @@ nav.contact img:hover{ /*Animation quand on passe sur le nav*/
 }
 
 @keyframes jump-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateY(-5px) }
-  35% { transform: translateY(-5px) rotate(17deg) }
-  55% { transform: translateY(-5px) rotate(-17deg) }
-  65% { transform: translateY(-5px) rotate(17deg) }
-  75% { transform: translateY(-5px) rotate(-17deg) }
-  100% { transform: translateY(0) rotate(0) }
+    0% { transform: translateX(0) }
+    25% { transform: translateY(-5px) }
+    35% { transform: translateY(-5px) rotate(17deg) }
+    55% { transform: translateY(-5px) rotate(-17deg) }
+    65% { transform: translateY(-5px) rotate(17deg) }
+    75% { transform: translateY(-5px) rotate(-17deg) }
+    100% { transform: translateY(0) rotate(0) }
 }
 
 @media (max-width: 900px) {
@@ -175,12 +175,12 @@ h2{ /*Titre*/
 }
 
 @keyframes bouge { /*Animation flèche*/
-  from {
+    from {
     transform: translateY(0);
-  }
-  to {
+    }
+    to {
     transform: translateY(40px);
-  }
+    }
 }
 
 
@@ -295,6 +295,7 @@ a.competences-icon{ /*Format compétences avec icons*/
 
 a.competences-item:hover, a.competences-icon:hover{ /*Effet quand on passe sur les compétences*/
     transform: scale(0.8);
+    transition: transform 0.4s ease;
 }
 
 .icon{ /*Format icons*/
@@ -313,6 +314,41 @@ section.competences a.competences-item, section.competences a.competences-icon{ 
 
 
 /*--------------------Section Projets et pages projets--------------------*/
+
+
+.carousel-window {
+    overflow: hidden;
+    width: 75%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track article {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+}
+
+.carousel-btn {
+    border: none;
+    background: none;
+    color: var(--color-bleu-gris);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel-btn:hover {
+    color: var(--color-orange)
+}
+
+@media (max-width: 900px) {
+    .carousel-track article {
+    flex: 0 0 100%;
+    }
+}
 
 .projets article{ /*Format des div des projets*/
     background-color: var(--color-azur);

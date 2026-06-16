@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projet LogIT</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Barre de navigation principale">
+      <ul>
+        <li><a href="index.html#partie_home">Célia Moulin</a></li>
+        <li><a href="index.html#partie_apropos">A propos</a></li>
+        <li><a href="index.html#partie_competences">Compétences</a></li>
+        <li><a href="index.html#partie_projets">Projets</a></li>
+        <li><a href="index.html#partie_experiences">Expériences</a></li>
+        <li><a href="index.html#partie_loisirs">Loisirs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="contact" aria-label="Liens de contact">
+    <ul>
+      <li><a href="mailto:celia.moulin@etu.univ-grenoble-alpes.fr"><img src="image/envelope.png"
+            alt="Envoyer un email"></a></li>
+      <li><a href="https://linkedin.com/in/celia-moulin" target="_blank" rel="noopener noreferrer"><img
+            src="image/linkedin.png" alt="Accéder à LinkedIn"></a></li>
+      <li><a href="https://github.com/Celia-Mn" target="_blank" rel="noopener noreferrer"><img
+            src="image/github_sign.png" alt="Accéder à GitHub"></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="projets">
+      <article class="pageprojets">
+        <h4>LogIT</h4>
+        <ul class="competences-list">
+          <li><a href="index.html#python" class="competences-icon"><img class="icon"
+                src="image/icones_competences/python.png" alt="Logo Python">Python</a></li>
+          <li><a href="index.html#textual" class="competences-icon"><img class="icon"
+                src="image/icones_competences/textual.png" alt="Logo Textual">Textual</a></li>
+          <li><a href="index.html#sqlite" class="competences-icon"><img class="icon"
+                src="image/icones_competences/sqlite.png" alt="Logo SQLite">SQLite</a></li>
+          <li><a href="index.html#sqlalchemy" class="competences-icon"><img class="icon"
+                src="image/icones_competences/sqlalchemy.png" alt="Logo SQLAlchemy">SQLAlchemy</a></li>
+          <li><a href="index.html#github" class="competences-icon"><img class="icon"
+                src="image/icones_competences/github.png" alt="Logo GitHub">GitHub</a></li>
+          <li><a href="index.html#json" class="competences-icon"><img class="icon"
+                src="image/icones_competences/json.png" alt="Logo JSON">JSON</a></li>
+          <li><a href="index.html#gestiondeprojet" class="competences-item">Gestion de projet</a></li>
+          <li><a href="index.html#documentation" class="competences-item">Documentation technique</a></li>
+        </ul>
+        <ul>
+          <li>Equipe : individuel</li>
+          <li>Durée : 10 semaines</li>
+        </ul>
+        <p>LogIT est une application de gestion de journaux d’intervention développée dans le cadre de mon stage chez
+          MAATEL. Le projet avait pour objectif de moderniser un outil existant fonctionnant uniquement en ligne de
+          commande (CLI) en proposant une interface terminal plus ergonomique basée sur Textual (TUI).</p>
+        <p>J’ai d’abord analysé l’application existante afin d’identifier ses limites et les besoins des utilisateurs.
+          Cette phase a conduit à la rédaction d’un document de spécifications et à la définition d’une nouvelle
+          architecture plus modulaire.</p>
+        <p>L’application a ensuite été entièrement restructurée autour d’une architecture MVP (Model-View-Presenter)
+          afin d’améliorer sa maintenabilité et son évolutivité. J’ai également mis en place SQLAlchemy comme ORM pour
+          remplacer les accès directs à SQLite et préparer une éventuelle migration vers d’autres systèmes de bases de
+          données.</p>
+        <p>Parmi les fonctionnalités développées figurent la consultation et le filtrage avancé des journaux, la gestion
+          des équipements, l’export CSV, les paramètres personnalisables ainsi qu’un système d’internationalisation.
+          L’interface TUI permet une navigation au clavier et à la souris tout en conservant la légèreté d’une
+          application terminal.</p>
+        <p>Ce projet m’a permis de développer mes compétences en architecture logicielle, en conception d’interfaces
+          utilisateur, en bases de données relationnelles, en programmation Python et en gestion de projet.</p>
+        <a href="https://github.com/Celia-Mn/LogIT" target="_blank" rel="noopener noreferrer">Voir le code</a>
+      </article>
+      <aside class="pageprojets" aria-label="Aperçu visuel du projet">
+        <img src="image/projet_4.1.png" alt="Écran principal de LogIT">
+        <img src="image/projet_4.2.png" alt="Écran des paramètres de LogIT">
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Copyright 2025</p>
+    <p>Créé par <a href="index.html#partie_home">Célia Moulin</a></p>
+  </footer>
+
+</body>
+
+</html>

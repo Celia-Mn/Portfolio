@@ -344,7 +344,7 @@ section.competences a.competences-item, section.competences a.competences-icon{ 
     color: var(--color-orange)
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .carousel-track article {
     flex: 0 0 100%;
     }

@@ -300,11 +300,20 @@ a.competences-item:hover, a.competences-icon:hover{ /*Effet quand on passe sur l
 
 .icon{ /*Format icons*/
     margin: 0 .5rem 0 .5rem;
+    padding: 0;
     max-width: 2rem;
     max-height: 2rem;
     width: auto;
     height: auto;
+}
+
+.icon-long {
+    margin: 0.5rem 0 0.5rem 0;
     padding: 0;
+    max-width: 4rem;
+    max-height: 2rem;
+    width: auto;
+    height: auto;
 }
 
 section.competences a.competences-item, section.competences a.competences-icon{ /*Couleur orange pour les compétences de la section compétence*/
@@ -356,7 +365,7 @@ section.competences a.competences-item, section.competences a.competences-icon{ 
     width: 35%;
 }
 
-.projets img{ /*Format des images dans projets*/
+.projets article > img{ /*Format des images dans projets*/
     width: 100%;
     height: 350px;
     border-radius: 10px 10px 0 0;
